@@ -48,46 +48,41 @@ const SearchPage = () => {
             <CiSearch className="text-gray-500 " size={29} />
           </div>
         </div>
-        <div className="w-full sm:w-full max-w-6xl mx-auto flex flex-wrap gap-4 sm:gap-[3px] py-10 sm:py-1 items-center justify-around sm:px-0 px-4  ">
+        <div className="w-full sm:w-full max-w-6xl mx-auto flex flex-wrap gap-4 sm:gap-[5px] py-10 sm:py-1 items-center justify-around sm:px-0 px-4 ">
           {getItem.length > 0 ? (
             getItem.slice(0, 16).map((product, index) => (
-              <div key={index} className="h-[370px] w-[100%] sm:w-[49%] sm:h-[43vh] rounded-3xl  md:w-[30%] lg:w-[22%] flex items-center justify-center sm:mb-[25px] "
-              >
-                 <div className="h-auto w-[100%] sm:w-full md:w-full sm:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0">
-                    <Link
-                      to={`/products/${product.id}`}
-                      className="w-full h-full flex flex-col items-center justify-center">
-                     <div className="h-[250px] w-[100%] sm:h-[32vh] sm:w-[100%] bg-black relative flex flex-col items-center justify-center rounded-3xl">
-                          <span className="lg:hidden absolute top-2 left-1 sm:top-0 sm:right-2 flex items-center justify-center font-bold sm:w-[45px] sm:h-[40px] rounded-full">
-                            <FaHeart className="z-[1000] md:hidden hover:text-red-600 transition duration-400 ease sm:text-[26px] text-[#f6f6f6]" />
-                          </span>
+              <div key={index}
+                    className="h-[85%] w-[265px] sm:w-[150px] sm:h-[260px] md:w-[35%] md:h-[345px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] mb-[10px] sm:mb-[20px]">
+                  <div className="h-auto w-[100%] sm:w-[155px] md:w-full md:h-full sm:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-1">
+                    <Link to={`/products/${product.id}`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998]">
+                     <div className="h-[250px] w-[100%] sm:h-[32vh] sm:w-[100%] md:h-[200px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
                           <span
                             className="absolute top-2 right-5 sm:right-2 flex items-center justify-center bg-[#f6f6f6] text-black font-bold w-[80px] h-[25px] sm:w-[34%] sm:h-[16%]
-                              sm:text-[13px] rounded-full"
-                          >
+                              sm:text-[13px] rounded-full">
                             {product.discountPercentage + "%"}
                           </span>
                           <img
                             src={product.thumbnail}
-                            className="h-[250px] w-[250px] sm:h-[70%] sm:w-[60%] object-cover shadow-md rounded-3xl"
+                            className="h-[250px] w-[250px] sm:h-[70%] sm:w-[60%] md:h-[180px] md:w-[180px] object-cover shadow-md rounded-3xl"
                             alt=""
                           />
                         </div>
                       <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
-                        <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[10px] sm:h-[20px] pr-1 sm:text-balance leading-0 flex items-center justify-start">
-                          <p className="text-[17px] sm:text-sm text-[#000] sm:leading-[15px] font-bold capitalize overflow-hidden">
+                        <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance  leading-0 flex items-center justify-start">
+                          <p className="text-[17px] sm:text-sm text-[#000] sm:leading-[15px] sm:font-semibold font-bold capitalize overflow-hidden">
                             {product.title}
                           </p>
                         </div>
-                        <div className="h-full sm:h-[50px] w-full sm:pl-[10px] flex flex-col items-end justify-around sm:justify-around sm:items-center sm:pt-1 ">
-                          <p className="text-[19px] flex flex-col sm:text-sm w-full relative left-1 sm:left-0 font-bold leading-none capitalize text-[#000]">
+                        <div className="h-full sm:h-[50px] w-full sm:pl-[5px] flex flex-col items-end justify-around sm:justify-around sm:items-center">
+                          <p className="text-[19px] flex flex-col sm:text-[14px] w-full relative left-1 sm:left-0 font-bold leading-none capitalize  text-[#000]">
                             Rs{" "}
                             {(product.price -
                               (product.discountPercentage / 100) *
                                 product.price)
                               .toString()
-                              .slice(0, 4) + "0"}
-                            <span className="text-[18px] sm:text-sm font-normal leading-none capitalize text-[#000] line-through">
+                              .slice(0, 4)
+                              .replace(".", ",") + ".00"}
+                            <span className="text-[18px] sm:text-[13px] font-normal leading-none capitalize text-[#000] line-through">
                               Rs
                               {product.price
                                 .toString()
@@ -98,18 +93,16 @@ const SearchPage = () => {
                         </div>
                       </div>
                     </Link>
-                    <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[49px]">
-                      <FaHeart
-                        className="sm:hidden relative right-[50px] sm:right-4 bottom-[5px] z-[1000] hover:text-red-600 transition duration-400 ease sm:text-[30px] text-[#000]"
-                        size={30}
-                      />
+                    <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px]">
+                      <FaHeart onClick={()=>wishlistFunc(product)}
+                        className="relative right-[50px] sm:right-[16px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                       <FaCartArrowDown
                         onClick={() => addToCart(product)}
-                        className="relative right-[30px] sm:right-[20px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[32px] text-[30px] text-[#000]"
+                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
                       />
                     </div>
                   </div>
-              </div>
+                  </div>
             ))
           ) : (
             <div className="h-[50vh] w-full flex items-center justify-center">

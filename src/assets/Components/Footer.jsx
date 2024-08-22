@@ -7,8 +7,8 @@ const Footer = () => {
     <>
       <div>
         <footer className="w-full sm:h-full sm:w-full text-gray-800 bg-gray-200 body-font pt-5 md:flex md:flex-col md:items-center md:justify-center flex flex-col items-center justify-center">
-          <div className="sm:w-full sm:h-full sm:flex sm:flex-col sm:items-center md:px-1 py-12 w-[90vw] md:mx-0 flex items-start justify-start md:flex-row md:items-start md:justify-center">
-            <div className="flex flex-col items-start sm:items-center justify-center w-[350px] md:items-start gap-4 md:gap-1 md:w-[40vw] mb-10 md:mb-0 md:pl-10">
+          <div className="sm:w-full sm:h-full md:w-full sm:flex sm:flex-col sm:items-center md:px-1 py-12 w-[90vw] md:mx-0 flex items-start justify-start md:flex-row md:items-start md:justify-center">
+            <div className="flex flex-col items-start sm:items-center justify-center w-[350px] md:items-start gap-4 md:gap-1 md:w-[40vw] mb-10 md:mb-0 md:pl-4 sm:w-full">
               <p className='text-3xl md:text-2xl '>About Us.</p>
               <p className="mt-2 text-md md:text-md text-gray-800 md:w-[250px] text-left sm:text-center sm:px-5  md:text-left">SunniesMart E-Commerce is a dynamic and innovative online retail platform that offers a wide range of products to customers worldwide.</p>
               <p className='font-bold text-gray-600 md:text-lg text-xl'>Guaranteed safe checkout</p>

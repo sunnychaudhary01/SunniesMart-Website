@@ -40,20 +40,20 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
   };
 
   return (
-    <div className="flex px-[100px] md:w-full shadow-sm shadow-[#d7d1d1] z-[9999] justify-between items-center h-[90px] w-full">
-      <div className="hidden sm:block md:block h-[30px] w-[30px] z-[998] absolute md:left-[10px] left-[0px] top-0">
+    <div className="flex px-[100px] md:w-full lg:w-full shadow-sm shadow-[#d7d1d1] z-[9999] justify-between items-center h-[90px] w-full">
+      <div className="hidden lg:block sm:block md:block h-[30px] w-[30px]  lg:h-[30px] lg:w-[30px] z-[998] absolute md:left-[10px] left-[0px] top-0">
         <RxHamburgerMenu
           onClick={toggleNav}
-          className="hidden text-[23px] md:text-[26px] md:block sm:relative md:relative top-[34px]  left-[18px] sm:block" />
+          className="hidden text-[23px] md:text-[26px] lg:text-[32px] sm:relative md:relative lg:relative top-[34px]  left-[18px] sm:block lg:block md:block" />
       </div>
-      <div
-        className={`z-[998] sm:block hidden md:block md:fixed sm:fixed left-[0px] top-0 border border-gray-200 right-0 p-2 w-[290px] md:w-[400px] h-screen shadow-2xl rounded-2xl bg-white transform transition-transform duration-1000 overflow-hidden ${
+      
+      <div className={`z-[998] sm:block hidden lg:block md:block md:fixed lg:fixed sm:fixed left-[0px] top-0 border border-gray-200 right-0 p-2 w-[290px] md:w-[400px] lg:w-[400px] h-screen shadow-2xl rounded-2xl bg-white transform transition-transform duration-1000 overflow-hidden ${
           headerVisible ? "translate-x-0" : "-translate-x-full"}`}>
-        <div className="cursor-pointer h-full w-full md:w-full relative top-[50px] left-[28px]">
+        <div className="cursor-pointer h-full w-full md:w-full lg:w-full relative top-[50px] left-[28px]">
           <Link onClick={toggleNav} to="/" className="sm:w-[20vw]">
-            <h1 className="text-3xl md:text-4xl text-[#000] font-extrabold cursor-pointer">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl text-[#000] font-extrabold cursor-pointer">
               Sunnies
-              <span className="text-3xl md:text-4xl text-[#639fff] font-extrabold">
+              <span className="text-3xl md:text-4xl lg:text-4xl text-[#639fff] font-extrabold">
                 Mart
               </span>
             </h1>
@@ -61,12 +61,12 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
           <span className="w-full">
             <IoExitOutline
               onClick={toggleNav}
-              className="hidden text-[30px] md:text-[38px] md:block fixed top-[62px] left-[240px] md:left-[270px] sm:block"
+              className="hidden text-[30px] lg:text-[35px] md:text-[38px] md:block lg:block fixed top-[62px] left-[240px] md:left-[270px] lg:left-[280px] lg:top-[62px] sm:block"
             />
           </span>
 
-          <div className="w-full h-full md:w-full z-[998] relative left-[0px] top-[50px] right-[37px] ">
-            <ul className="flex flex-col items-start gap-12 text-[#391616] text-[21px] font-[500]">
+          <div className="w-full h-full md:w-full lg:w-full z-[998] relative left-[0px] top-[50px] right-[37px] ">
+            <ul className="flex flex-col items-start gap-12 md:gap-8 lg:gap-6 sm:gap-8 text-[#391616] text-[21px] font-[500] lg:text-[28px]">
               <Link onClick={toggleNav} to="/search">
                 <li
                   onClick={() => handleMenuColor(0)}
@@ -124,7 +124,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
               <li
                 onClick={() => handleMenuColor(4)}
                 className={
-                  show[3]
+                  show[4]
                     ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                     : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                 }
@@ -141,20 +141,17 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
               </li>
             </ul>
             <span className="w-full h-[150px] flex items-center justify-start">
-              <div
-                onClick={toggleNav}
+              <div onClick={toggleNav}
                 className="h-full w-[250px] flex justify-start items-center text-[#391616] gap-10"
               >
                 <Link to="https://www.linkedin.com/in/shani-kannaujiya-592a59287">
                   <FaLinkedinIn
-                    className="hover:text-blue-600 transition  delay-100 cursor-pointer"
-                    size={25}
+                    className="hover:text-blue-600 transition  delay-100 cursor-pointer text-[25px] lg:text-[32px]"
                   />
                 </Link>
                 <Link to="https://github.com/Sunnychaudhary01">
                   <FaGithub
-                    className="hover:text-blue-600 transition  delay-100 cursor-pointer"
-                    size={25}
+                    className="hover:text-blue-600 transition  delay-100 cursor-pointer text-[25px] lg:text-[32px]"
                   />
                 </Link>
               </div>
@@ -163,32 +160,32 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
         </div>
       </div>
       <Link to="/" className="sm:w-[0%] md:w-[0]">
-        <div className="sm:relative z-[997] sm:right-[52px] md:relative md:right-[40px] sm:flex md:flex md:items-center md:justify-between sm:justify-between cursor-pointer h-full sm:w-[78vw] md:w-[85vw] w-full">
-          <h1 className="sm:text-[24px] md:text-[31px]  text-4xl text-[#000] font-extrabold cursor-pointer">
+        <div className="sm:relative z-[997] sm:right-[52px] md:relative md:right-[40px] lg:relative lg:right-[40px] sm:flex md:flex md:items-center md:justify-between lg:flex lg:justify-between sm:justify-between cursor-pointer h-full sm:w-[78vw] lg:w-[85vw] md:w-[85vw] w-full">
+          <h1 className="sm:text-[24px] md:text-[31px] lg:text-[40px]  text-4xl text-[#000] font-extrabold cursor-pointer">
             Sunnies
-            <span className="sm:text-[24px] md:text-[31px] text-4xl text-[#639fff] font-extrabold">
+            <span className="sm:text-[24px] md:text-[31px] lg:text-[40px] text-4xl text-[#639fff] font-extrabold">
               Mart
             </span>
           </h1>
-          <div className="sm:flex w-[90px] h-[35px] hidden md:flex md:items-center  md:relative sm:relative sm:top-[2px] sm:left-[15px] sm:w-[75px] md:w-[100px]">
-            <ul className=" md:w-full text-gray-800 flex justify-start md:justify-around items-center md:gap-2 ">
+          <div className="sm:flex w-[90px] h-[35px] hidden lg:flex md:flex md:items-center md:relative sm:relative sm:top-[2px] sm:left-[15px] sm:w-[75px] md:w-[100px]">
+            <ul className=" md:w-full text-gray-800 flex justify-start md:justify-around items-center md:gap-2 lg:gap-3 ">
               <Link to="/search">
                 <li>
                   {" "}
-                  <FaSearch  className="text-[20px] md:text-[23px] mr-[8px]" />
+                  <FaSearch  className="text-[20px] lg:text-[26px] md:text-[23px] mr-[8px]" />
                 </li>
               </Link>
               <Link to="/signin">
                 <li>
-                  <IoPersonSharp  className="text-[20px] md:text-[23px] mr-[8px]" />
+                  <IoPersonSharp  className="text-[20px] lg:text-[26px] md:text-[23px] mr-[8px]" />
                 </li>
               </Link>
               <Link to="/cart">
                 <li>
-                  <span className="w-[21px]  h-[20px] text-[18px] sm:text-[16px] font-semibold absolute left-[75px] sm:left-[60px] md:left-[75px] flex items-center justify-end md:bottom-[21px] bottom-[22px] rounded-full text-gray-700">
+                  <span className="w-[21px]  h-[20px] text-[18px] sm:text-[16px] font-semibold absolute left-[75px] sm:left-[60px] md:left-[75px] lg:relative lg:left-[5px] lg:top-[2px] flex items-center justify-end md:bottom-[21px] bottom-[22px] rounded-full text-gray-700">
                     {cart.length > 0 ? cart.length : null}
                   </span>
-                  <FaShoppingCart className="text-[20px] md:text-[23px] mr-[10px]" />
+                  <FaShoppingCart className="text-[20px] lg:text-[26px] md:text-[23px] lg:mb-[19px] mr-[10px]" />
                 </li>
               </Link>
             </ul>
@@ -196,7 +193,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
         </div>
       </Link>
       <header>
-        <ul className="sm:hidden md:hidden flex items-center gap-20  text-[#391616] text-[22px] font-[500]">
+        <ul className="sm:hidden lg:hidden md:hidden flex items-center gap-20  text-[#391616] text-[22px] font-[500]">
           <Link to="/search">
             <li
               onClick={() => handleMenuColor(0)}
@@ -274,11 +271,11 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
             onClick={() => setCartVisible(!cartVisible)}
             className="w-full flex items-center justify-center gap-2">
             <div className="relative">
-            <RiShoppingCartLine size={24} />
+            <FaShoppingCart size={24} />
              <span className="w-[30px] h-[30px] text-[19px] absolute left-6 bottom-2 text-gray-500">
                 {cart.length > 0 ? cart.length : null}
              </span>
-                <div className={`transition-transform duration-500 ease-in-out z-[9999] fixed top-0 border border-gray-200 right-0 p-2 w-[550px] h-full bg-white shadow-2xl rounded-2xl ${
+                <div className={`lg:hidden transition-transform duration-500 ease-in-out z-[9999] fixed top-0 border border-gray-200 right-0 p-2 w-[550px] h-full bg-white shadow-2xl rounded-2xl ${
                   cartVisible ? "translate-x-0" : "translate-x-full" }`}
                   onClick={(e) => e.stopPropagation()}>
                   <div className="h-[120px] w-full flex flex-col items-start justify-start gap-5 relative top-[15px]">
@@ -294,8 +291,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
                           {cart.map((cartNew, id) => (
                             <div
                               key={id}
-                              className="h-[120px] pl-[10px]  border-b pr-[10px] w-full flex items-center justify-around text-gray-900"
-                            >
+                              className="h-[120px] pl-[10px]  border-b pr-[10px] w-full flex items-center justify-around text-gray-900">
                               <div className="relative">
                                 <img
                                   className="h-[100px] w-[110px] object-fill rounded-lg bg-black"
@@ -342,7 +338,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
                           ))}
                         </div>
                       )}
-                    </div>
+                    </div>{cart.length === 0 ? (" ") : (
                     <div className="w-full relative top-[0px] flex flex-col items-center justify-end border-t border-gray-200">
                       <div className=" w-full h-[50px] flex justify-between px-3 mt-4  border-b">
                         <p className="text-[19px] text-black font-bold pl-[30px] ">
@@ -366,7 +362,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
                           </button>
                         </Link>
                       </div>
-                    </div>
+                    </div>)}
                   </div>
                 </div>
               </div>

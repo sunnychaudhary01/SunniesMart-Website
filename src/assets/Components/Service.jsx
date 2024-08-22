@@ -7,7 +7,7 @@ import { FaHeadphones } from "react-icons/fa6";
 const Service = () => {
   return (
     <>
-     <div className="h-[200px] w-[1250px] sm:w-full md:w-full sm:h-[150px] flex sm:flex sm:flex-wrap sm:items-center sm:gap-3 sm:justify-center md:flex-wrap md:items-center md:gap-3 md:justify-center mx-auto justify-around">
+     <div className="h-[200px] w-[1250px] sm:w-full md:w-full lg:w-full xl:w-full sm:h-[150px] flex sm:flex sm:flex-wrap sm:items-center sm:gap-3 sm:justify-center md:flex-wrap md:items-center lg:items-center lg:justify-center md:gap-3 lg:px-1 md:justify-center mx-auto justify-around xl:p-[4px]">
   <div className="h-[140px] w-[300px] sm:h-[150px] sm:w-[120px] flex sm:flex-col items-center justify-center">
     <div className="flex items-center justify-center pr-[20px]">
       <FaShippingFast size={50} />

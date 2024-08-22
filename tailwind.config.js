@@ -12,9 +12,9 @@ export default {
       'md': {'min':'641px','max':'768px'},
       // => @media (min-width: 768px) { ... }
 
-      'lg': {'min':'1025px','max':'1440px'},
+      'lg': {'min':'769px','max':'992px'},
       // => @media (min-width: 1024px) { ... }
-      
+      'xl': {'min':'993px','max':'1024px'},
     },
   },
   plugins: [],
