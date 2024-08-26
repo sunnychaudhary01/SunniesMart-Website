@@ -29,7 +29,7 @@ const CheckOut = ({ cart, cartTotal }) => {
 
   return (
     <>
-      <div id="section2" className="h-full w-full lg:min-h-full md:min-h-full lg:mb-[3px] lg:pb-[100px] lg:shadow-md xl:shadow-md flex items-start justify-center sm:w-full sm:h-full sm:flex-col md:shadow-md md:mb-[100px] md:pb-[100px] xl:pb-[150px] sm:mb-[150px] xl:mb-[0px]">
+      <div id="section2" className="h-full w-full lg:min-h-full md:min-h-full mb-[150px] lg:mb-[3px] lg:pb-[100px] lg:shadow-md xl:shadow-md flex items-start justify-center sm:w-full sm:h-full sm:flex-col md:shadow-md md:mb-[100px] md:pb-[100px] xl:pb-[150px] sm:mb-[150px] xl:mb-[0px]">
         <div className="h-screen lg:pt-[0px] w-full sm:h-full flex flex-col items-center justify-start pl-2 px-2 lg:pl-1 md:pl-1 sm:pl-2 overflow-y-scroll xl:px-4 xl:pl-2">
           <div className="h-auto sm:h-full w-full sm:mt-[0px] flex flex-col sm:justify-center sm:items-center  pt-10  sm:pt-5 xl:pt-3">
             <div className="w-full lg:pt-[0px] lg:h-[10px] flex items-end justify-between sm:px-[8px]">
@@ -174,7 +174,7 @@ const CheckOut = ({ cart, cartTotal }) => {
                       </div>
                     )}
                   </div>
-                  <button className="sm:hidden  h-12 w-full bg-blue-500 hover:bg-blue-600 text-white rounded mt-8 font-semibold text-lg">
+                  <button className="sm:hidden hidden  h-12 w-full bg-blue-500 hover:bg-blue-600 text-white rounded mt-8 font-semibold text-lg">
                     Complete Order
                   </button>
                 </div>
@@ -210,23 +210,23 @@ const CheckOut = ({ cart, cartTotal }) => {
             </div>
           </div>
           <div className="w-full h-auto mt-[20px] sm:mt-[50px] flex flex-col items-center">
-            <div className="w-full max-w-[650px] flex  items-center justify-center sm:flex-row sm:justify-between p-4 lg:p-0 xl:p-0 sm:p-0 sm:px-2  rounded-lg  ">
-              <p className="w-full sm:w-auto text-[17px] sm:text-[16px] lg:text-center xl:text-left text-gray-800 sm:px-2 xl:pl-[20px]">
+            <div className="w-full max-w-[650px] flex  items-center justify-center sm:flex-row sm:justify-between p-0 lg:p-0 xl:p-0 sm:p-0 sm:px-2  rounded-lg  ">
+              <p className="w-full sm:w-auto text-[17px] sm:text-[16px] lg:text-center xl:text-left text-gray-800 sm:px-2 xl:pl-[20px] pl-[10px]">
                 Subtotal
               </p>
               <p className="w-full sm:w-auto text-[17px] sm:text-[16px] text-gray-800 mt-2 sm:mt-0 sm:ml-0 ml-[300px] lg:ml-[250px] md:ml-[100px] xl:ml-[255px] sm:px-2">
                 Rs {(cartTotal).toString().slice(0, 6).replace('.', ',') + '.00'}
               </p>
             </div>
-            <div className="w-full max-w-[650px] flex  items-center justify-center md:justify-center sm:flex-row sm:justify-between p-4 lg:p-0 xl:p-0 sm:pt-1 sm:px-2 rounded-lg mt-4 md:mt-0 sm:mt-0 ">
+            <div className="w-full max-w-[650px] flex  items-center justify-center md:justify-center sm:flex-row sm:justify-between p-0 pl-[10px] lg:p-0 xl:p-0 sm:pt-1 sm:px-2 rounded-lg mt-4 md:mt-0 sm:mt-0 ">
               <p className="w-full sm:w-auto text-[22px] sm:text-[20px] font-semibold lg:text-left md:text-left lg:pl-[27px] xl:pl-[20px] sm:px-2">
                 Total
               </p>
-              <p className="w-full md:w-[300px] sm:w-auto text-[20px] sm:text-[20px] font-semibold mt-2 md:mt-0 sm:ml-0 ml-[300px] lg:ml-[200px] md:ml-[50px] xl:ml-[240px] sm:mt-0 sm:px-2">
+              <p className="w-full md:w-[300px] sm:w-auto text-[20px] sm:text-[20px] font-semibold mt-2 md:mt-0 sm:ml-0 ml-[275px] lg:ml-[200px] md:ml-[50px] xl:ml-[240px] sm:mt-0 sm:px-2">
                 Rs {(cartTotal).toString().slice(0, 6).replace('.', ',') + '.00'}
               </p>
             </div>
-            <button className="hidden h-12 w-full sm:w-[300px]  bg-blue-500 hover:bg-blue-600 text-white rounded mt-8 font-semibold text-lg">
+            <button className="lg:block h-12 sm:w-[300px] w-[550px]  bg-blue-500 hover:bg-blue-600 text-white rounded mt-10 md:w-full lg:w-full xl:w-full font-semibold text-lg">
               Complete Order
             </button>
           </div>

@@ -97,7 +97,7 @@ const FeatureSlider = ({ onDataItem, addToCart, wishlistFunc }) => {
 
   return (
     <>
-      <div className="w-[1200px] mx-auto sm:w-full sm:h-[550px] h-[600px] xl:h-[580px] flex flex-col items-center justify-center sm:items-center sm:justify-center sm:gap-5 relative top-[580px] sm:top-[650px] md:w-full lg:w-full xl:w-[100vw] md:top-[100px]">
+      <div className="w-[1200px] mx-auto sm:w-full sm:h-[550px] h-[620px] xl:h-[580px] flex flex-col items-center justify-center sm:items-center sm:justify-center sm:gap-5 relative top-[580px] sm:top-[650px] md:w-full lg:w-full xl:w-[100vw] md:top-[100px]">
         <p className="text-[43px] sm:text-[26px] relative sm:bottom-[8px] bottom-[30px] font-semibold sm:w-full lg:w-full sm:flex sm:justify-center md:flex md:items-center md:justify-center lg:flex lg:justify-center md:relative sm:items-center sm:relative ">
           <span>Feature Collection</span>
         </p>
@@ -140,7 +140,7 @@ const FeatureSlider = ({ onDataItem, addToCart, wishlistFunc }) => {
                               (product.discountPercentage / 100) *
                                 product.price)
                               .toString()
-                              .slice(0, 4) + "00"}
+                              .slice(0, 5).replace(".", ",") + ".00"}
                             <span className="text-[18px] sm:text-[13px] font-normal leading-none capitalize text-[#000] line-through">
                               Rs
                               {product.price
@@ -155,7 +155,7 @@ const FeatureSlider = ({ onDataItem, addToCart, wishlistFunc }) => {
                     <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
                       <FaHeart
                         onClick={() => wishlistFunc(product)}
-                        className="relative right-[50px] sm:right-[16px] lg:right-[35px] xl:right-[35px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+                        className="relative right-[50px] sm:right-[20px] lg:right-[35px] xl:right-[35px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
                       />
                       <FaCartArrowDown
                         onClick={() => addToCart(product)}

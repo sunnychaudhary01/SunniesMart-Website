@@ -47,7 +47,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
           className="hidden text-[23px] md:text-[26px] lg:text-[32px] sm:relative md:relative lg:relative top-[34px]  left-[18px] sm:block lg:block md:block" />
       </div>
       
-      <div className={`z-[998] sm:block hidden lg:block md:block md:fixed lg:fixed sm:fixed left-[0px] top-0 border border-gray-200 right-0 p-2 w-[290px] md:w-[400px] lg:w-[400px] h-screen shadow-2xl rounded-2xl bg-white transform transition-transform duration-1000 overflow-hidden ${
+      <div className={`z-[999] sm:block hidden lg:block md:block md:fixed lg:fixed sm:fixed left-[0px] top-0 border border-gray-200 right-0 p-2 w-[290px] md:w-[400px] lg:w-[400px] h-screen shadow-2xl rounded-2xl bg-white transform transition-transform duration-1000 overflow-hidden ${
           headerVisible ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="cursor-pointer h-full w-full md:w-full lg:w-full relative top-[50px] left-[28px]">
           <Link onClick={toggleNav} to="/" className="sm:w-[20vw]">
@@ -160,7 +160,7 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
         </div>
       </div>
       <Link to="/" className="sm:w-[0%] md:w-[0]">
-        <div className="sm:relative z-[997] sm:right-[52px] md:relative md:right-[40px] lg:relative lg:right-[40px] sm:flex md:flex md:items-center md:justify-between lg:flex lg:justify-between sm:justify-between cursor-pointer h-full sm:w-[78vw] lg:w-[85vw] md:w-[85vw] w-full">
+        <div className="sm:relative z-[997] sm:right-[52px] md:relative md:right-[40px] lg:relative lg:right-[40px] sm:flex md:flex md:items-center md:justify-between lg:flex lg:justify-between sm:justify-between cursor-pointer h-full sm:w-[78vw] lg:w-[85vw] md:w-[85vw] w-full ">
           <h1 className="sm:text-[24px] md:text-[31px] lg:text-[40px]  text-4xl text-[#000] font-extrabold cursor-pointer">
             Sunnies
             <span className="sm:text-[24px] md:text-[31px] lg:text-[40px] text-4xl text-[#639fff] font-extrabold">

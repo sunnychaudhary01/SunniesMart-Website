@@ -144,9 +144,8 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
                 .filter((item) => item.category === pro)
                 .slice(0, 4)
                 .map((product, index) => (
-                  <div key={index}
-                    className="h-[85%] w-[265px] sm:w-[150px] sm:h-[260px] md:w-[35%] md:h-[345px] lg:h-[365px] lg:w-[275px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] lg:mb-0 mb-[10px] sm:mb-[20px] xl:w-[230px] xl:h-[370px]">
-                  <div className="h-auto w-[100%] sm:w-[155px] md:w-full md:h-full sm:h-full lg:w-full lg:h-full xl:w-full xl:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-1">
+                  <div key={index} className="h-[85%] w-[265px] sm:w-[179px] sm:h-[260px] md:w-[35%] md:h-[345px] lg:h-[365px] lg:w-[275px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] lg:mb-0 mb-[10px] sm:mb-[20px] xl:w-[230px] xl:h-[370px]">
+                  <div className="h-auto w-[100%] sm:w-[170px] md:w-full md:h-full sm:h-full lg:w-full lg:h-full xl:w-full xl:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-1">
                     <Link to={`/products/${product.id}#section1`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998]">
                      <div className="h-[250px] w-[100%] sm:h-[180px] sm:w-[100%] md:h-[200px] lg:h-[230px] lg:w-full xl:h-[230px] xl:w-[230px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
                           <span
@@ -187,10 +186,10 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
                     </Link>
                     <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
                       <FaHeart onClick={()=>wishlistFunc(product)}
-                        className="relative right-[50px] sm:right-[16px] xl:right-[35px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
+                        className="relative right-[50px] sm:right-[20px] xl:right-[35px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                       <FaCartArrowDown
                         onClick={() => addToCart(product)}
-                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
                       />
                     </div>
                   </div>

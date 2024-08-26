@@ -52,8 +52,8 @@ const SearchPage = () => {
           {getItem.length > 0 ? (
             getItem.slice(0, 16).map((product, index) => (
               <div key={index}
-                    className="h-[85%] w-[265px] sm:w-[150px] sm:h-[260px] md:w-[35%] md:h-[345px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] mb-[10px] sm:mb-[20px]">
-                  <div className="h-auto w-[100%] sm:w-[155px] md:w-full md:h-full sm:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-1">
+                    className="h-[85%] w-[265px] sm:w-[150px] sm:h-[265px] md:w-[35%] md:h-[345px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] mb-[10px] sm:mb-[30px]">
+                  <div className="h-auto w-[100%] sm:w-[170px] md:w-full md:h-full sm:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-0">
                     <Link to={`/products/${product.id}`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998]">
                      <div className="h-[250px] w-[100%] sm:h-[32vh] sm:w-[100%] md:h-[200px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
                           <span
@@ -74,7 +74,7 @@ const SearchPage = () => {
                           </p>
                         </div>
                         <div className="h-full sm:h-[50px] w-full sm:pl-[5px] flex flex-col items-end justify-around sm:justify-around sm:items-center">
-                          <p className="text-[19px] flex flex-col sm:text-[14px] w-full relative left-1 sm:left-0 font-bold leading-none capitalize  text-[#000]">
+                          <p className="text-[19px] flex flex-col sm:text-[13px] w-full relative left-1 sm:left-0 font-bold leading-none capitalize  text-[#000]">
                             Rs{" "}
                             {(product.price -
                               (product.discountPercentage / 100) *
@@ -95,10 +95,10 @@ const SearchPage = () => {
                     </Link>
                     <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px]">
                       <FaHeart onClick={()=>wishlistFunc(product)}
-                        className="relative right-[50px] sm:right-[16px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
+                        className="relative right-[50px] sm:right-[18px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                       <FaCartArrowDown
                         onClick={() => addToCart(product)}
-                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
                       />
                     </div>
                   </div>

@@ -84,8 +84,8 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
   return (
     <>
       <div className="w-full sm:w-full sm:h-full h-[100vh]">
-        <div className="h-full w-full sm:w-full md:h-full md:w-full lg:h-full lg:w-full   bg-zinc-50 flex sm:flex-col md:flex-col lg:flex-col  items-center justify-around">
-          <div className="h-full sm:w-full md:w-full lg:w-full w-[600px] xl:w-[500px] flex flex-col sm:items-start md:items-start md:pl-[60px] items-start justify-center sm:pl-[40px] pl-[40px] xl:pl-[20px]">
+        <div className="h-full w-full sm:w-full md:h-full md:w-full lg:h-full lg:w-full bg-zinc-50 flex sm:flex-col md:flex-col lg:flex-col  items-center justify-around">
+          <div className="h-full sm:w-full md:w-full lg:w-full w-[600px] xl:w-[500px] flex flex-col sm:items-start md:items-start md:pl-[60px] items-start justify-center sm:pl-[20px] pl-[40px] xl:pl-[20px]">
             <div id="section1" className="w-[400px] h-[400px] sm:w-[250px] sm:h-[250px] md:w-[295px] md:h-[300px] lg:w-[350px] lg:h-[360px] md:mt-[50px] lg:mt-[100px] sm:mt-[50px] flex items-center sm:justify-center justify-center rounded-xl mr-[40px] bg-[#000] border border-[#f5caca]">
               <img className="h-[400px] w-[400px] sm:w-[250px] sm:h-[250px] md:w-[250px] md:h-[250px] lg:w-[350px] lg:h-[350px] rounded-xl"
                 src={product.thumbnail}
@@ -94,12 +94,12 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
             </div>
           </div>
           <div className="w-full h-full sm:w-full sm:h-full lg:h-full xl:w-full ">
-            <div className="h-[100vh] w-full sm:w-full xl:w-full  flex flex-col items-start justify-start lg:pt-5 pt-[120px] xl:pt-[60px] md:pt-[30px] sm:pt-[30px] sm:pl-[40px] pl-[60px] xl:pl-[20px] lg:pl-[40px]">
+            <div className="h-[100vh] w-full sm:w-full xl:w-full  flex flex-col items-start justify-start lg:pt-5 pt-[120px] xl:pt-[60px] md:pt-[30px] sm:pt-[30px] sm:pl-[20px] pl-[60px] xl:pl-[20px] lg:pl-[40px]">
               <h2 className="text-[43px] xl:text-[40px] sm:text-[30px] text-gray-800 font-bold tracking-wide">
                 {product.title}
               </h2>
-              <div className="h-[50px] w-[600px] sm:w-[100%] sm:h-[80px] flex sm:flex-wrap items-start justify-start sm:items-center sm:justify-start xl:w-full xl:justify-start ">
-                <p className="h-[50px] w-[200px] sm:w-[120px] sm:text-[22px] text-[34px] xl:text-[32px]  pl-[0px] text-gray-700 flex relative top-[10px] font-thin line-through capitalize">
+              <div className="h-[50px] w-[600px] sm:w-[100%] sm:h-[100px] flex sm:flex-wrap items-start justify-start sm:items-center sm:justify-start xl:w-full xl:justify-start ">
+                <p className="h-[50px] w-[200px] sm:w-[135px] sm:text-[22px] text-[34px] xl:text-[32px]  pl-[0px] text-gray-700 flex relative top-[10px] font-thin line-through capitalize">
                   Rs.{" "}
                   {product.price.toString().slice(0, 6).replace(".", ",") +
                     ".00"}
@@ -114,7 +114,7 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
                     .slice(0, 4)
                     .replace(".", ",") + ".00"}
                 </p>
-                <span className="relative top-[25px] left-[35px] sm:top-[0px] sm:left-[0px] xl:left-[0px] flex items-center justify-center sm:items-center sm:justify-center xl:items-center bg-[#e6dcdc] text-gray-600 font-bold sm:w-[100px] w-[120px] h-[30px] rounded-md">
+                <span className="relative top-[25px] left-[35px] sm:top-[0px] sm:left-[0px] xl:left-[0px] flex items-center justify-center sm:items-center sm:justify-center xl:items-center bg-[#e6dcdc] text-gray-600 font-bold sm:w-[100px] w-[120px] h-[30px] sm:h-[40px] rounded-md">
                   {" "}
                   Save -{Math.round(product.discountPercentage) + "%"}
                 </span>
@@ -156,46 +156,45 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
                   </Link>
                 </div>
               </div>
-              <div className="w-full h-full xl:w-full xl:h-full sm:flex sm:flex-col sm:mt-12 md:flex md:flex-col md:mt-2 lg:flex lg:flex-col lg:mt-12 xl:mt-5 xl:flex xl:flex-col xl:gap-3 lg:gap-2 ">
-                <div className="sm:h-[60px] w-full xl:w-full m-0 sm:flex sm:flex-col xl:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 flex items-start lg:h-[55px] lg:flex lg:flex-col lg:items-start ">
-                  <p className="text-lg md:text-[24px] lg:text-[25px] xl:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-between md:mt-0 lg:mt-0 lg:mr-8 ">
+              <div className="w-full h-full xl:w-full xl:h-full sm:flex sm:flex-col sm:mt-12 md:flex md:flex-col md:mt-2 lg:flex lg:flex-col lg:mt-12 xl:mt-5 xl:flex xl:flex-col xl:gap-3 lg:gap-2">
+                <div className="sm:h-[60px] w-full flex-col xl:w-full m-0 sm:flex sm:flex-col xl:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 flex items-start lg:h-[55px] lg:flex lg:flex-col lg:items-start ">
+                  <p className="text-[22px] md:text-[24px] lg:text-[25px] xl:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-between md:mt-0 lg:mt-0 lg:mr-8 ">
                     Availability:
                   </p>
-                  <span className="text-gray-700 ml-2 sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-semibold lg:ml-0 md:text-[20px] xl:text-[22px] lg:text-[21px] lg:font-normal xl:font-normal ">
+                  <span className="text-gray-700 ml-0 sm:ml-1 text-[18px] md:ml-1 sm:text-left md:text-left md:font-normal font-normal lg:ml-0 md:text-[20px] xl:text-[22px] lg:text-[21px] lg:font-normal xl:font-normal ">
                     {product.stock} left in stock
                   </span>
                 </div>
                 <div className="sm:h-[60px] w-full m-0 sm:flex sm:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 lg:flex lg:flex-col lg:items-start  lg:h-[55px] lg:justify-start">
-                  <p className="text-lg md:text-[24px] xl:text-[24px] lg:text-[24px]
+                  <p className="text-[22px] md:text-[24px] xl:text-[24px] lg:text-[24px]
                      md:font-semibold font-bold sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-16 ">
                     Ratings:
                   </p>
-                  <span className="text-gray-700 ml-2 sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-semibold lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px] lg:font-normal xl:font-normal">
+                  <span className="text-gray-700 ml-0 text-[18px] sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-normal lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px] lg:font-normal xl:font-normal">
                     {product.rating} stars
                   </span>
                 </div>
                 <div className="sm:h-[60px] w-full sm:flex sm:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 lg:flex lg:flex-col lg:items-start lg:h-[55px] lg:justify-start">
-                  <p className="text-lg md:text-[24px] md:font-semibold font-bold lg:text-[24px] sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-14 xl:text-[24px]">
+                  <p className="text-[22px] md:text-[24px] md:font-semibold font-bold lg:text-[24px] sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-14 xl:text-[24px]">
                     Delivery:
                   </p>
-                  <span className="text-gray-700 ml-2 sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-semibold lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px] lg:font-normal xl:font-normal ">
+                  <span className="text-gray-700 ml-0 text-[18px] sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-normal lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px] lg:font-normal xl:font-normal ">
                     {product.shippingInformation}
                   </span>
                 </div>
                 <div className="sm:h-[60px] w-full sm:flex sm:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 lg:flex lg:flex-col lg:items-start  lg:h-[55px] lg:justify-start">
-                  <p className="text-lg md:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-4 xl:text-[24px] lg:text-[24px]">
+                  <p className="text-[22px] md:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-4 xl:text-[24px] lg:text-[24px]">
                     Return Policy:
                   </p>
-                  <span className="text-gray-700 ml-2 sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-semibold lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px]  lg:font-normal xl:font-normal ">
+                  <span className="text-gray-700 ml-0 text-[18px] sm:ml-1 md:ml-1 sm:text-left md:text-left md:font-normal font-normal lg:ml-0 md:text-[20px] xl:text-[24px] lg:text-[21px]  lg:font-normal xl:font-normal ">
                     {product.returnPolicy}
                   </span>
                 </div>
                 <div className="sm:h-[60px] w-full sm:flex sm:flex-col sm:items-start sm:mt-1 md:h-[60px] md:flex md:flex-col md:items-start md:mt-1 lg:flex lg:flex-col lg:items-start lg:h-[55px] lg:justify-start">
-                  <p className="text-lg md:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-8 xl:text-[24px] lg
-                  text-[24px] ">
+                  <p className="text-[22px] md:text-[24px] md:font-semibold font-bold sm:mt-0 flex items-start justify-start md:mt-0 lg:mt-0 lg:mr-8 xl:text-[24px] lg">
                     Description:
                   </p>
-                  <span className=" lg:w-[94%] text-gray-700 ml-2 sm:ml-1 md:ml-1 pr-2 sm:text-left md:text-left md:font-normal font-semibold lg:ml-0 md:text-[20px] md:pr-[10px] xl:font-normal lg:text-[21px] lg:font-normal xl:text-[22px]">
+                  <span className=" lg:w-[94%] text-gray-700 ml-0 text-[18px] sm:ml-1 md:ml-1 pr-2 sm:text-left md:text-left md:font-normal font-normal lg:ml-0 md:text-[20px] md:pr-[10px] xl:font-normal lg:text-[21px] lg:font-normal xl:text-[22px] leading-none">
                     {product.description}
                   </span>
                 </div>
@@ -204,7 +203,7 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
           </div>
         </div>
       </div>
-      <section className="min-h-[100vh] w-full md:w-full md:min-h-[1000px] lg:min-h-full sm:relative sm:top-[200px] md:relative md:top-[500px] lg:relative lg:top-[550px] xl:relative xl:top-[200px] flex flex-col items-center justify-center md:justify-start sm:mb-[250px] md:mb-[500px] lg:mb-[650px] xl:mb-[450px]">
+      <section className="min-h-[100vh] w-full md:w-full md:min-h-[1000px] lg:min-h-full sm:relative sm:top-[200px] md:relative md:top-[500px] relative top-[160px] mb-[250px] lg:relative lg:top-[550px] xl:relative xl:top-[200px] flex flex-col items-center justify-center md:justify-start sm:mb-[250px] md:mb-[500px] lg:mb-[650px] xl:mb-[450px]">
         <div className="h-[150px] sm:h-[120px] w-full flex sm:flex sm:items-center sm:justify-center items-center justify-center">
           <p className="text-4xl sm:text-[28px] font-semibold text-gray-800 relative sm:top-0 md:top-0 lg:top-0 top-[50px]">
             Related Products
@@ -232,8 +231,8 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
                           />
                         </div>
                       <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
-                        <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance sm:leading-[18px] leading-0 flex items-center justify-start">
-                          <p className="text-[17px] sm:text-sm md:text-[20px] text-[#000] font-bold capitalize overflow-hidden">
+                        <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance leading-0 flex items-center justify-start">
+                          <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[16px] text-[#000] font-normal capitalize overflow-hidden">
                             {product.title}
                           </p>
                         </div>
@@ -259,10 +258,10 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
                     </Link>
                     <div className="h-full w-full  sm:w-full md:w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px] md:bottom-[40px] ">
                       <FaHeart onClick={()=>wishlistFunc(product)}
-                        className="relative right-[50px] sm:right-[16px] md:right-[50px] md:text-[30px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
+                        className="relative right-[50px] sm:right-[24px] md:right-[50px] md:text-[30px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                       <FaCartArrowDown
                         onClick={() => addToCart(product)}
-                        className="relative right-[30px] sm:right-[12px] md:right-[35px] md:text-[30px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+                        className="relative right-[30px] sm:right-[17px] md:right-[35px] md:text-[30px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
                       />
                     </div>
                   </div>

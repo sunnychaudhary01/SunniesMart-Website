@@ -135,8 +135,8 @@ const Products = ({ addToCart, wishlistFunc }) => {
           </div>
           <section className="min-h-[100vh] sm:w-full md:w-full xl:w-full lg:w-full  md:h-full w-[1200px] sm:mb-[350px] mb-[500px] mx-auto">
             <div className="w-full sm:h-[480px] sm:w-full md:w-full lg:w-full min-h-[100vh] sm:min-h-[100vh] relative top-[70px] flex flex-col items-start md:items-center justify-start">
-              <div className="w-full sm:w-full sm:h-[480px] lg:h-[200px] md:w-full md:h-[200px] h-[150px] lg:w-full md:p-0 p-[20px] md:px-[10px] z-[995] bg-gray-200 rounded-lg flex sm:flex-col lg:flex-col lg:items-start lg:justify-start sm:items-start md:flex-col md:items-start md:justify-center sm:gap-3 lg:gap-1 items-center justify-start ">
-                <div className="w-[200px] sm:w-[170px] xl:w-[200px] xl:h-[60px] md:h-[50px] h-[50px] lg:w-[250px] lg:h-[70px] sm:h-[42px] rounded-lg flex sm:flex-col items-center justify-around border border-gray-400 lg:flex lg:items-center
+              <div className="w-full sm:w-full sm:h-[480px] lg:h-[200px] md:w-full md:h-[200px] h-[150px] lg:w-full md:p-0 p-[20px] md:px-[10px] z-[995] bg-gray-200 rounded-lg flex sm:flex-col lg:flex-col lg:items-start lg:justify-start sm:items-start md:flex-col md:items-start md:justify-center sm:gap-2 lg:gap-1 items-center justify-start ">
+                <div className="w-[200px] sm:w-[195px] xl:w-[200px] xl:h-[60px] md:h-[50px] h-[50px] lg:w-[250px] lg:h-[70px] sm:h-[42px] rounded-lg flex sm:flex-col items-center justify-around border border-gray-400 lg:flex lg:items-center
                 lg:justify-center ">
                   <select
                     className="relative rounded-lg flex items-center justify-around bg-transparent outline-none"
@@ -157,7 +157,7 @@ const Products = ({ addToCart, wishlistFunc }) => {
                     })}
                   </select>
                 </div>
-                <div className="w-[200px] sm:w-[170px] xl:w-[200px] xl:h-[60px] h-[50px] sm:h-[40px] lg:h-[70px]
+                <div className="w-[200px] sm:w-[195px] xl:w-[200px] xl:h-[60px] h-[50px] sm:h-[40px] lg:h-[70px]
                 lg:w-[250px] relative left-[30px] md:left-0 sm:left-0 lg:left-0 rounded-lg flex items-center justify-around border border-gray-400">
                   <select
                     className="relative rounded-lg flex items-center justify-around bg-transparent outline-none"
@@ -169,14 +169,14 @@ const Products = ({ addToCart, wishlistFunc }) => {
                     <option value="desc">Price high to low</option>
                   </select>
                 </div>
-                <p className="w-[270px] md:w-[270px] lg:w-[320px] xl:w-[350px] text-[21px] sm:text-[20px] sm:text-gray-700 relative left-[450px] xl:left-[200px] sm:left-0 md:left-[0px] lg:relative lg:left-[0px] lg:top-[5px] md:top-[5px] lg:text-[25px] xl:text-[22px] md:flex md:items-center flex justify-between items-center font-semibold xl:gap-2">
+                <p className="w-[270px] sm:w-[260px] md:w-[270px] lg:w-[320px] xl:w-[350px] text-[21px] sm:text-[20px] sm:text-gray-700 relative left-[450px] xl:left-[200px] sm:left-0 md:left-[0px] lg:relative lg:left-[0px] lg:top-[5px] md:top-[5px] lg:text-[25px] xl:text-[22px] md:flex md:items-center flex justify-between items-center font-semibold xl:gap-2">
                   Result - Showing:{" "}
                   <span className="font-bold text-black">
                     {+filteredProducts.length} Items
                   </span>
                 </p>
               </div>
-              <div className="w-full min-h-[100vh] xl:w-full sm:min-h-[100vh] sm:overflow-y-scroll sm:w-full flex flex-wrap items-center justify-start gap-10 sm:gap-2 md:gap-4 sm:pb-[50px] pt-[70px] sm:pt-[40px] sm:items-center sm:justify-center md:justify-center sm:ml-[3px] xl:justify-center lg:justify-center md:w-full md:h-full  ">
+              <div className="w-full min-h-[100vh] xl:w-full sm:min-h-[100vh] sm:overflow-y-scroll sm:w-full flex flex-wrap items-center justify-start gap-10 sm:gap-1 md:gap-4 sm:pb-[50px] pt-[70px] sm:pt-[40px] sm:items-center sm:justify-center md:justify-center sm:ml-[0px] xl:justify-center lg:justify-center md:w-full md:h-full  ">
                 {filteredProducts
                   .sort((a, b) => {
                     if (sortOrder === "asc") {
@@ -190,8 +190,8 @@ const Products = ({ addToCart, wishlistFunc }) => {
                   .slice(0, 30)
                   .map((product, index) => (
                     <div key={index}
-                      className="h-[85%] w-[265px] lg:w-[265px] sm:w-[48%] sm:h-[265px] md:w-[45%] md:h-[375px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] sm:mb-[10px] sm:ml-[2px] ">
-                      <div className="h-auto w-[265px] sm:w-full sm:h-full md:w-[270px] md:h-[350px] bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0">
+                      className="h-[85%] w-[265px] lg:w-[265px] sm:w-[48%] sm:h-[265px] md:w-[45%] md:h-[375px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] sm:mb-[30px] sm:ml-[0px]">
+                      <div className="h-auto w-[265px] sm:w-[170px] sm:h-full md:w-[260px] md:h-[350px] bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0">
                         <Link to={`/products/${product.id}`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998] ">
                           <div className="h-[250px] w-[100%] sm:h-[32vh] sm:w-[100%] md:h-[200px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
                             <span
@@ -207,7 +207,7 @@ const Products = ({ addToCart, wishlistFunc }) => {
                           </div>
                           <div className="h-[120px] sm:h-[160px] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
                             <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance leading-0 flex items-center justify-start">
-                              <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[15px] sm:font-semibold text-[#000] font-bold capitalize overflow-hidden">
+                              <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[15px] sm:font-normal text-[#000] font-bold capitalize overflow-hidden">
                                 {product.title}
                               </p>
                             </div>
@@ -233,10 +233,10 @@ const Products = ({ addToCart, wishlistFunc }) => {
                         </Link>
                         <div className="h-full w-full  sm:w-full md:w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px] md:bottom-[40px] ">
                           <FaHeart onClick={() => wishlistFunc(product)}
-                            className="relative right-[50px] sm:right-[15px] md:right-[50px] md:text-[30px] bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[24px] text-[30px] text-[#000]" />
+                            className="relative right-[50px] sm:right-[20px] md:right-[50px] md:text-[30px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[24px] text-[30px] text-[#000]" />
                           <FaCartArrowDown
                             onClick={() => addToCart(product)}
-                            className="relative right-[30px] sm:right-[10px] md:right-[35px] md:text-[30px] bottom-[5px] sm:bottom-[5px] z-[1000] hover:text-[#866b6b] transition duration-400 ease sm:text-[24px] text-[30px] text-[#000]"
+                            className="relative right-[30px] sm:right-[14px] md:right-[35px] md:text-[30px] bottom-[5px] sm:bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[24px] text-[30px] text-[#000]"
                           />
                         </div>
                       </div>
