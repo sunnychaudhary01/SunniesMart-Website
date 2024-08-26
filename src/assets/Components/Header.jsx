@@ -66,78 +66,34 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
           </span>
 
           <div className="w-full h-full md:w-full lg:w-full z-[998] relative left-[0px] top-[50px] right-[37px] ">
-            <ul className="flex flex-col items-start gap-12 md:gap-8 lg:gap-6 sm:gap-8 text-[#391616] text-[21px] font-[500] lg:text-[28px]">
-              <Link onClick={toggleNav} to="/search">
-                <li
-                  onClick={() => handleMenuColor(0)}
-                  className={
-                    show[0]
-                      ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                      : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                  }
-                >
-                  <FaSearch className="mr-[10px]" />
-                  Search
-                </li>
-              </Link>
-              <Link onClick={toggleNav} to="/products">
-                <li
-                  onClick={() => handleMenuColor(1)}
-                  className={
-                    show[1]
-                      ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                      : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                  }
-                >
-                  <FaBoxOpen className="mr-[10px]" />
-                  Products
-                </li>
-              </Link>
-              <Link onClick={toggleNav} to="/signin">
-                <li
-                  onClick={() => handleMenuColor(2)}
-                  className={
-                    show[2]
-                      ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                      : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                  }
-                >
-                  <FaSignInAlt className="mr-[10px]" />
-                  Sign In
-                </li>
-              </Link>
-              <li onClick={() => handleMenuColor(3)}
-                className={
-                  show[3]
-                    ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                    : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
-                <Link onClick={toggleNav} to="/cart">
-                  <span
-                    onClick={() => setCartVisible(!cartVisible)}
-                    className="w-full flex items-center justify-center gap-2"
-                  >
-                    <FaShoppingCart className="mr-[10px]" />
-                    Cart
-                  </span>
-                </Link>
-              </li>
-              <li
-                onClick={() => handleMenuColor(4)}
-                className={
-                  show[4]
-                    ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                    : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                }>
-                <Link onClick={toggleNav} to="/wishlist">
-                  <span
-                    onClick={() => setCartVisible(!cartVisible)}
-                    className="w-full flex items-center justify-center gap-2">
-                    <FaHeart className="mr-[10px]" />
-                    Wishlist
-                  </span>
-                </Link>
-              </li>
-            </ul>
+          <ul className="flex flex-col items-start gap-12 md:gap-8 lg:gap-6 sm:gap-8 text-[#391616] text-[21px] font-[500] lg:text-[28px]">
+  <li onClick={() => handleMenuColor(0)} className={show[0] ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2" : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+    <Link onClick={toggleNav} to="/search" className="flex items-center">
+      <FaSearch className="mr-[10px]" /> Search
+    </Link>
+  </li>
+  <li onClick={() => handleMenuColor(1)} className={show[1] ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2" : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+    <Link onClick={toggleNav} to="/products" className="flex items-center">
+      <FaBoxOpen className="mr-[10px]" /> Products
+    </Link>
+  </li>
+  <li onClick={() => handleMenuColor(2)} className={show[2] ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2" : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+    <Link onClick={toggleNav} to="/signin" className="flex items-center">
+      <FaSignInAlt className="mr-[10px]" /> Sign In
+    </Link>
+  </li>
+  <li onClick={() => handleMenuColor(3)} className={show[3] ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2" : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+    <Link onClick={toggleNav} to="/cart" className="flex items-center">
+      <FaShoppingCart className="mr-[10px]" /> Cart
+    </Link>
+  </li>
+  <li onClick={() => handleMenuColor(4)} className={show[4] ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2" : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+    <Link onClick={toggleNav} to="/whishlist" className="flex items-center">
+      <FaHeart className="mr-[10px]" /> Wishlist
+    </Link>
+  </li>
+</ul>
+
             <span className="w-full h-[150px] flex items-center justify-start">
               <div onClick={toggleNav}
                 className="h-full w-[250px] flex justify-start items-center text-[#391616] gap-10"
@@ -192,71 +148,59 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
       </Link>
       <header>
         <ul className="sm:hidden lg:hidden md:hidden flex items-center gap-20  text-[#391616] text-[22px] font-[500]">
-          <Link to="/search">
+          
             <li
               onClick={() => handleMenuColor(0)}
               className={
                 show[0]
                   ? "text-[#fff] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                   : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"}>
+              <Link to="/search">
               Search
+              </Link>
             </li>
-          </Link>
-          <Link to="/products">
-            <li
-              onClick={() => handleMenuColor(1)}
+            <li onClick={() => handleMenuColor(1)}
               className={
                 show[1]
                   ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                   : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-              }>
+              }><Link to="/products">
               Products
-            </li>
           </Link>
-          <li
-            onClick={() => handleMenuColor(2)}
+            </li>
+          <li onClick={() => handleMenuColor(2)} 
             className={
               show[2]
                 ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex flex-col items-center gap-2"
                 : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex flex-col items-center gap-2"
-            }
-          >
+            }>
             <IoPersonSharp
               size={24}
               onMouseEnter={handleMouseEnter}
-              className="mr-[0px]"
-            />
+              className="mr-[0px]"/>
           </li>
           {hide && (
             <div
               onMouseLeave={handleMouseLeave}
-              className="h-[80px] transition delay-500 w-[150px] border absolute top-[60px] right-[210px] z-10 bg-white shadow-md "
-            >
+              className="h-[80px] transition delay-500 w-[150px] border absolute top-[60px] right-[210px] z-10 bg-white shadow-md ">
               <ul className="w-full h-full text-[16px] text-gray-700 font-medium flex flex-col items-start justify-center gap-2 px-5">
-                <Link to="/signin">
+                
                   {" "}
-                  <li
-                    className={
-                      show[2]
+                  <li className={show[2]
                         ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex flex-col items-center gap-2"
                         : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex flex-col items-center gap-2"
-                    }
-                  >
-                    Sign in{" "}
-                  </li>
+                    }><Link to="/signin"> Sign in{" "}
                 </Link>
-                <Link to="/wishlist">
+                  </li>
                   {" "}
-                  <li
-                    className={
+                  <li className={
                       show[2]
                         ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                         : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                    }
-                  >
+                    }><Link to="/whishlist">
                     Wishlist <span className="font-extrabold" >{wishlist.length}</span>{" "}
-                  </li>
                 </Link>
+                  </li>
               </ul>
             </div>
           )}

@@ -119,7 +119,7 @@ if (isProductExist) {
           />
           <Route path="/signin/" element={<SignIn />} />
           <Route path="/signup/" element={<SignUp />} />
-          <Route path="/wishlist/" element={<WhishLIst  removeWishlistItem={removeWishlistItem} wishlist={wishlist} />} />
+          <Route path="/whishlist/" element={<WhishLIst  removeWishlistItem={removeWishlistItem} wishlist={wishlist} />} />
           <Route path="/checkout/" element={<CheckOut cart={cart} cartTotal={cartTotal} />} />
           <Route path="/search/:id" element={<SearchPage />} />
           <Route path="/search/" element={<SearchPage addToCart={addToCart} wishlistFunc={wishlistFunc} />} />
