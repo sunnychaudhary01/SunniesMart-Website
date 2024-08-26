@@ -56,7 +56,7 @@ const WhishLIst = ({ wishlist, removeWishlistItem }) => {
                   </div>
                 </div>
               </Link>
-              <div className="h-full w-full  sm:w-full md:w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px] md:bottom-[40px] ">
+              <div className="h-full w-full z-[998] sm:w-full md:w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px] md:bottom-[40px] ">
                 <FaTrash onClick={()=>removeWishlistItem(id)}
                   className="relative right-[50px] sm:right-[18px] md:right-[50px] md:text-[30px] bottom-[5px]  hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-red-700"/>
               </div>
