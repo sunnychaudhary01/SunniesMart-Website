@@ -73,7 +73,7 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
               )
               .map((product, index) => (
                 <div key={index} className="h-[270px] w-full sm:w-[50%] md:w-[49%] lg:w-[275px] xl:w-[252px] lg:h-[280px] md:h-[220px] sm:h-[170px] hover:text-blue-600 transition 300 ease-in-out rounded-2xl flex items-center md:items-start justify-center sm:p-6 p-2">
-                  <a href={`/products/${product.id}`}>
+                  <Link to={`/products/${product.id}`}>
                     <div className="h-[320px] w-[250px] sm:h-[29vh] sm:w-[44vw] md:h-[270px] md:w-[280px] lg:h-[260px] lg:w-[265px] border  bg-[#e4cfcf] flex flex-col items-center justify-center rounded-2xl shadow-xl">
                       <img
                         src={product.thumbnail}
@@ -85,7 +85,7 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
                       </p>
                     </div>
                     <p className="h-[20px] capitalize cursor-pointer text-xl font-bold relative top-[15px]"></p>
-                  </a>
+                  </Link>
                 </div>
               ))}
         </div>
