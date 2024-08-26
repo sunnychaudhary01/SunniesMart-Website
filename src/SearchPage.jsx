@@ -82,7 +82,7 @@ const SearchPage = ({ addToCart, wishlistFunc }) => {
                           .slice(0, 4) + "00"}
                         <span className="text-[18px] sm:text-[13px] font-normal leading-none capitalize text-[#000] line-through">
                           Rs
-                          {product.price
+                          {(product.price)
                             .toString()
                             .slice(0, 6)
                             .replace(".", ",") + ".00"}
@@ -92,7 +92,7 @@ const SearchPage = ({ addToCart, wishlistFunc }) => {
                   </div>
                 </Link>
                 <div className="h-full w-full sm:h-[25%] z-[998] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
-                  <FaHeart onClick={()=>wishlistFunc(index)}
+                  <FaHeart onClick={() => wishlistFunc(product)}
                     className="relative right-[50px] sm:right-[20px] xl:right-[35px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                   <FaCartArrowDown
                     onClick={() => addToCart(product)}

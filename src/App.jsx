@@ -18,8 +18,6 @@ const [cart, setCart] = useState([]);
 const [wishlist, setWishlist] = useState([]);
 
 
-
-
 const wishlistFunc = (product) => {
 const itemExist = wishlist.find((item)=> item.id === product.id)
 if (itemExist) {
