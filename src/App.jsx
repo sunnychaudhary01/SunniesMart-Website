@@ -122,7 +122,7 @@ if (isProductExist) {
           <Route path="/wishlist/" element={<WhishLIst  removeWishlistItem={removeWishlistItem} wishlist={wishlist} />} />
           <Route path="/checkout/" element={<CheckOut cart={cart} cartTotal={cartTotal} />} />
           <Route path="/search/:id" element={<SearchPage />} />
-          <Route path="/search/" element={<SearchPage />} />
+          <Route path="/search/" element={<SearchPage addToCart={addToCart} wishlistFunc={wishlistFunc} />} />
           <Route path="/products/:id" element={<ProductsRef addToCart={addToCart} wishlistFunc={wishlistFunc}  handDec={handDec} handInc={handInc} />}/>
         </Routes>
       </BrowserRouter>

@@ -161,8 +161,8 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
                         </div>
                       <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
                         <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance  leading-0 flex items-center justify-start">
-                          <p className="text-[17px] sm:text-sm text-[#000] sm:leading-[15px] sm:font-semibold font-bold capitalize overflow-hidden">
-                            {product.title}
+                        <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[15px] sm:font-normal text-[#000] font-bold capitalize overflow-hidden">
+                                {product.title}
                           </p>
                         </div>
                         <div className="h-full sm:h-[50px] w-full sm:pl-[5px] flex flex-col items-end justify-around sm:justify-around sm:items-center">
@@ -184,7 +184,7 @@ const Hero = ({ onDataItem, addToCart, wishlistFunc }) => {
                         </div>
                       </div>
                     </Link>
-                    <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
+                    <div className="h-full w-full z-[998] sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
                       <FaHeart onClick={()=>wishlistFunc(product)}
                         className="relative right-[50px] sm:right-[20px] xl:right-[35px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
                       <FaCartArrowDown

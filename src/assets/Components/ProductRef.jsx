@@ -232,7 +232,7 @@ const ProductsRef = ({ onDataItem, cart, addToCart, handDec, handInc, wishlistFu
                         </div>
                       <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
                         <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance leading-0 flex items-center justify-start">
-                          <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[16px] text-[#000] font-normal capitalize overflow-hidden">
+                          <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[16px] text-[#000] font-bold sm:font-normal capitalize overflow-hidden">
                             {product.title}
                           </p>
                         </div>

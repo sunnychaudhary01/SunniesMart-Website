@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaCartArrowDown, FaHeart } from "react-icons/fa";
 import Footer from "./assets/Components/Footer";
 
-const SearchPage = () => {
+const SearchPage = ({ addToCart, wishlistFunc }) => {
   const [loading, setLoading] = useState(true);
   const [searchItem, setSearchItem] = useState("");
   const [getItem, setGetItem] = useState([]);
@@ -51,58 +51,56 @@ const SearchPage = () => {
         <div className="w-full sm:w-full max-w-6xl mx-auto flex flex-wrap gap-4 sm:gap-[5px] py-10 sm:py-1 items-center justify-around sm:px-0 px-4 ">
           {getItem.length > 0 ? (
             getItem.slice(0, 16).map((product, index) => (
-              <div key={index}
-                    className="h-[85%] w-[265px] sm:w-[150px] sm:h-[265px] md:w-[35%] md:h-[345px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] mb-[10px] sm:mb-[30px]">
-                  <div className="h-auto w-[100%] sm:w-[170px] md:w-full md:h-full sm:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-0">
-                    <Link to={`/products/${product.id}`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998]">
-                     <div className="h-[250px] w-[100%] sm:h-[32vh] sm:w-[100%] md:h-[200px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
-                          <span
-                            className="absolute top-2 right-5 sm:right-2 flex items-center justify-center bg-[#f6f6f6] text-black font-bold w-[80px] h-[25px] sm:w-[34%] sm:h-[16%]
-                              sm:text-[13px] rounded-full">
-                            {product.discountPercentage + "%"}
-                          </span>
-                          <img
-                            src={product.thumbnail}
-                            className="h-[250px] w-[250px] sm:h-[70%] sm:w-[60%] md:h-[180px] md:w-[180px] object-cover shadow-md rounded-3xl"
-                            alt=""
-                          />
-                        </div>
-                      <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
-                        <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance  leading-0 flex items-center justify-start">
-                          <p className="text-[17px] sm:text-sm text-[#000] sm:leading-[15px] sm:font-semibold font-bold capitalize overflow-hidden">
-                            {product.title}
-                          </p>
-                        </div>
-                        <div className="h-full sm:h-[50px] w-full sm:pl-[5px] flex flex-col items-end justify-around sm:justify-around sm:items-center">
-                          <p className="text-[19px] flex flex-col sm:text-[13px] w-full relative left-1 sm:left-0 font-bold leading-none capitalize  text-[#000]">
-                            Rs{" "}
-                            {(product.price -
-                              (product.discountPercentage / 100) *
-                                product.price)
-                              .toString()
-                              .slice(0, 4)
-                              .replace(".", ",") + ".00"}
-                            <span className="text-[18px] sm:text-[13px] font-normal leading-none capitalize text-[#000] line-through">
-                              Rs
-                              {product.price
-                                .toString()
-                                .slice(0, 6)
-                                .replace(".", ",") + ".00"}
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-full w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[40px]">
-                      <FaHeart onClick={()=>wishlistFunc(product)}
-                        className="relative right-[50px] sm:right-[18px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
-                      <FaCartArrowDown
-                        onClick={() => addToCart(product)}
-                        className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+              <div key={index} className="h-[85%] w-[265px] sm:w-[179px] sm:h-[260px] md:w-[35%] md:h-[345px] lg:h-[365px] lg:w-[275px] rounded-3xl flex flex-col items-center sm:flex-col md:flex-col md:items-center md:justify-center md:mb-[10px] lg:mb-0 mb-[10px] sm:mb-[20px] xl:w-[230px] xl:h-[370px]">
+              <div className="h-auto w-[100%] sm:w-[170px] md:w-full md:h-full sm:h-full lg:w-full lg:h-full xl:w-full xl:h-full bg-[#e4cfcf] shadow-xl rounded-3xl flex flex-col items-start justify-start shrink-0 sm:ml-1">
+                <Link to={`/products/${product.id}#section1`} className="w-full h-full flex flex-col items-center justify-center sm:z-[998]">
+                 <div className="h-[250px] w-[100%] sm:h-[180px] sm:w-[100%] md:h-[200px] lg:h-[230px] lg:w-full xl:h-[230px] xl:w-[230px] bg-black relative flex flex-col items-center justify-center rounded-3xl">
+                      <span
+                        className="absolute top-2 right-5 sm:right-2 flex items-center justify-center bg-[#f6f6f6] text-black font-bold w-[80px] h-[25px] sm:w-[34%] sm:h-[16%]
+                          sm:text-[13px] rounded-full">
+                        {product.discountPercentage + "%"}
+                      </span>
+                      <img
+                        src={product.thumbnail}
+                        className="h-[250px] w-[250px] sm:h-[120px] sm:w-[120px] md:h-[180px] md:w-[180px] lg:h-[180px] lg:w-[180px]  object-cover shadow-md rounded-3xl"
+                        alt=""
                       />
                     </div>
+                  <div className="h-[120px] sm:h-[51%] w-full sm:w-[90%] flex flex-col items-start justify-around sm:justify-around sm:rounded-3xl pl-7 sm:pl-0">
+                    <div className="h-[150px] relative top-0 mb-0 sm:top-2 left-1 sm:left-0 text-left w-[90%] sm:w-[100%] sm:pl-[5px] sm:h-[20px] pr-1 sm:text-balance  leading-0 flex items-center justify-start">
+                    <p className="text-[17px] sm:text-sm md:text-[20px] sm:leading-[15px] sm:font-normal text-[#000] font-bold capitalize overflow-hidden">
+                                {product.title}
+                              </p>
+                    </div>
+                    <div className="h-full sm:h-[50px] w-full sm:pl-[5px] flex flex-col items-end justify-around sm:justify-around sm:items-center">
+                      <p className="text-[19px] flex flex-col sm:text-[14px] w-full relative left-1 sm:left-0 font-bold leading-none capitalize text-[#000]">
+                        Rs{" "}
+                        {(product.price -
+                          (product.discountPercentage / 100) *
+                            product.price)
+                          .toString()
+                          .slice(0, 4) + "00"}
+                        <span className="text-[18px] sm:text-[13px] font-normal leading-none capitalize text-[#000] line-through">
+                          Rs
+                          {product.price
+                            .toString()
+                            .slice(0, 6)
+                            .replace(".", ",") + ".00"}
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                  </div>
+                </Link>
+                <div className="h-full w-full sm:h-[25%] z-[998] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px]">
+                  <FaHeart onClick={()=>wishlistFunc(index)}
+                    className="relative right-[50px] sm:right-[20px] xl:right-[35px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"/>
+                  <FaCartArrowDown
+                    onClick={() => addToCart(product)}
+                    className="relative right-[30px] sm:right-[12px] bottom-[5px] sm:bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[25px] text-[30px] text-[#000]"
+                  />
+                </div>
+              </div>
+              </div>
             ))
           ) : (
             <div className="h-[50vh] w-full flex items-center justify-center">

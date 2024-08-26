@@ -231,7 +231,7 @@ const Products = ({ addToCart, wishlistFunc }) => {
                             </div>
                           </div>
                         </Link>
-                        <div className="h-full w-full  sm:w-full md:w-full sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px] md:bottom-[40px] ">
+                        <div className="h-full w-full  sm:w-full md:w-full z-[998] sm:h-[25%] flex justify-end items-center relative bottom-[40px] sm:bottom-[42px] md:bottom-[40px] ">
                           <FaHeart onClick={() => wishlistFunc(product)}
                             className="relative right-[50px] sm:right-[20px] md:right-[50px] md:text-[30px] bottom-[5px] hover:text-[#866b6b] transition duration-400 ease sm:text-[24px] text-[30px] text-[#000]" />
                           <FaCartArrowDown
