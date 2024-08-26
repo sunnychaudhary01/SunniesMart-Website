@@ -127,13 +127,11 @@ export const Header = ({cart = [], removeItem, handDec, handInc, cartTotal, wish
                   show[4]
                     ? "text-[#3da1c3] hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
                     : "hover:text-[#3da1c3] hover:cursor-pointer tracking-widest flex items-center gap-2"
-                }
-              >
+                }>
                 <Link onClick={toggleNav} to="/wishlist">
                   <span
                     onClick={() => setCartVisible(!cartVisible)}
-                    className="w-full flex items-center justify-center gap-2"
-                  >
+                    className="w-full flex items-center justify-center gap-2">
                     <FaHeart className="mr-[10px]" />
                     Wishlist
                   </span>
